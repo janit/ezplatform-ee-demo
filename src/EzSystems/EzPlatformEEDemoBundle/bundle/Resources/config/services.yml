@@ -1,0 +1,9 @@
+services:
+
+    ezplatformeedemo.block.userprofiling:
+        class: 'EzSystems\EzPlatformEEDemoBundle\Block\UserProfilingBlock'
+        arguments:
+            - '@ezpublish.api.service.content'
+            - '@ezpublish.api.service.tags'
+        tags:
+            - { name: landing_page_field_type.block_type, alias: userprofiling }

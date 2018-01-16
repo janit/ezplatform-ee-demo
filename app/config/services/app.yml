@@ -112,3 +112,10 @@ services:
         class: AppBundle\Seo\CustomFallback
         arguments:
             - '@=service("ezpublish.config.resolver").getParameter("seo", "app")[0]'
+
+    app.twig.recommendations_extension:
+        class: AppBundle\Twig\RecommendationsExtension
+        arguments:
+            - '@ezpublish.config.resolver'
+        tags:
+            - { name: twig.extension }

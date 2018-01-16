@@ -11,14 +11,16 @@
         }
     ],
     "repositories": [
-        { "type": "composer", "url": "https://updates.ez.no/ttl" }
+        { "type": "composer", "url": "https://updates.ez.no/ttl" },
+        { "type": "vcs", "url": "https://github.com/ezsystems/ezstudio-personalized-block" }
     ],
     "replace": {
         "ezsystems/ezpublish-community": "*"
     },
     "autoload": {
         "psr-4": {
-            "AppBundle\\": "src/AppBundle/"
+            "AppBundle\\": "src/AppBundle/",
+            "EzSystems\\EzPlatformEEDemoBundle\\": "src/EzSystems/EzPlatformEEDemoBundle/bundle/"
         },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
@@ -74,7 +76,9 @@
         "netgen/tagsbundle": "^3.1@dev",
         "novactive/ezseobundle": "^2.2.0-alpha2",
         "components/bootstrap": "3.3.5",
-        "components/handlebars.js": "~3.0.0"
+        "components/handlebars.js": "~3.0.0",
+        "ezsystems/ezstudio-personalized-block": "dev-v2-test",
+        "ezsystems/recommendation-bundle": "dev-v2-test as 2.0"
     },
     "require-dev": {
         "behat/behat": "~3.2",
